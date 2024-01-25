@@ -2,24 +2,54 @@ html,body {
     margin:0;
     padding:0;
 }
+
+.header {
+    height: 150px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu {
+    margin-top: 8px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header_text {
+    line-height: 200%;
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+.selector {
+    border-width: 0;
+    background-color: transparent;
+    font-family: "Fira sans", sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+.selector:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
 .banner {
-    height: 500px;
+    height: 600px;
     background-image: url("images/polyphemus.png");
     background-position: center center;
+    display: flex;
+    align-items: center;
     
 }
 .banner_container {
-    padding-left: 250px;
+    padding-left: 125px;
     width: 500px;
     color: rgb(207, 250, 255);
-
-    position: relative;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%)
 }
 .banner_heading {
-    padding-bottom: 20px;
     font-family: "Playfair Display", serif;
     font-size: 60px;
     line-height: 120%;
@@ -29,4 +59,14 @@ html,body {
     font-weight: 300;
     font-size: 20px;
     line-height: 150%;
+}
+
+.profile_picture {
+    margin-left: auto;
+    margin-right: 125;
+    background-image: url("images/profile_picture.png");
+    background-position: -800 -400;
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
 }
