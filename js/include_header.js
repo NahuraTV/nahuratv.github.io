@@ -1,5 +1,6 @@
 html = 
-'<div class="header">\
+'<!DOCTYPE html>\
+<div class="header">\
     <div class="header_container">\
         <div class="header_text localized lang-en">\
             Nahura\'s Website\
