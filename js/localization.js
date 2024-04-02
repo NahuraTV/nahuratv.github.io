@@ -1,5 +1,10 @@
+const langs = {
+    "en": "English",
+    "navi": "Na'vi"
+}
+
 function changeLanguage(languageCode) {
-    Array.from(document.getElementsByClassName('lang')).forEach(function (elem) {
+    Array.from(document.getElementsByClassName('localized')).forEach(function (elem) {
         if (elem.classList.contains('lang-' + languageCode)) {
              elem.style.display = 'block';
         }
@@ -9,16 +14,33 @@ function changeLanguage(languageCode) {
     });
 }
 
-// select handler
+const urlParams = new URLSearchParams(window.location.search)
+
+// Add language selector handler
 const selector = document.getElementById('langSelector');
 selector.addEventListener('change', function (evt) {
-    changeLanguage(this.value);
+    urlParams.set('lang', this.value);
+    history.replaceState(null, null, "?"+urlParams.toString())
+    location.reload()
 });
 
-// detect initial browser language
+// Populate language selector
+for (const [key, value] of Object.entries(langs)) {
+    var opt = document.createElement('option')
+    opt.value = key
+    opt.innerText = value
+    selector.appendChild(opt)
+}
+
+// Detect and apply initial language
 const lang = navigator.userLanguage || navigator.language || 'en-EN';
-const startLang = Array.from(selector.options).map(opt => opt.value).find(val => lang.includes(val)) || 'en';
+var startLang = Array.from(selector.options).map(opt => opt.value).find(val => lang.includes(val)) || 'en';
+if (urlParams.get('lang') != null) {
+    if (urlParams.get('lang') in langs) {
+        startLang = urlParams.get('lang')
+    }
+}
 changeLanguage(startLang);
 
-// updating select with start value
+// Update selector with start value
 selector.selectedIndex = Array.from(selector.options).map(opt => opt.value).indexOf(startLang)

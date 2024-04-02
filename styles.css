@@ -1,6 +1,12 @@
 html,body {
     margin:0;
     padding:0;
+    --vertical-margin: 6%;
+    --horizontal-margin: 15%;
+}
+
+.localized {
+    display: none;
 }
 
 .header {
@@ -25,6 +31,7 @@ html,body {
     font-weight: 700;
 }
 .selector {
+    color: black;
     border-width: 0;
     background-color: transparent;
     font-family: "Fira sans", sans-serif;
@@ -37,7 +44,8 @@ html,body {
 }
 
 .banner {
-    height: 600px;
+    padding-top: var(--vertical-margin);
+    padding-bottom: var(--vertical-margin);
     background-image: url("images/polyphemus.png");
     background-position: center center;
     display: flex;
@@ -45,7 +53,7 @@ html,body {
     
 }
 .banner_container {
-    padding-left: 125px;
+    padding-left: var(--horizontal-margin);
     width: 500px;
     color: rgb(207, 250, 255);
 }
@@ -62,11 +70,74 @@ html,body {
 }
 
 .profile_picture {
+    aspect-ratio: 1;
     margin-left: auto;
-    margin-right: 125;
-    background-image: url("images/profile_picture.png");
-    background-position: -800 -400;
+    margin-right: var(--horizontal-margin);
     height: 350px;
     width: 350px;
     border-radius: 50%;
+}
+
+.projects_section {
+    padding-left: var(--horizontal-margin);
+    padding-right: var(--horizontal-margin);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+.projects_text_container {
+    width: 400px;
+    margin-right: 100px;
+}
+.projects_heading {
+    font-family: "Playfair Display", serif;
+    font-size: 35px;
+    font-weight: 700;
+}
+.projects_text {
+    font-family: "Fira Sans", serif;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 27px;
+}
+.projects_container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.project_container {
+    flex-basis: 100%;
+    text-align: center;
+    margin-right: 20px;
+    margin-left: 20px
+}
+.project_image {
+    aspect-ratio: 1;
+    height: 200px;
+    width: 200px;
+    border-radius: 25%;
+    background-color: black;
+}
+.project_title {
+    line-height: 200%;
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+.project_text {
+    font-family: "Fira Sans", serif;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 27px;
+}
+
+@media (max-width: 1000px) {
+    html,body {
+        --vertical-margin: 6%;
+        --horizontal-margin: 6%;
+    }
+    .banner_container {
+        width: 350px;
+    }
 }
