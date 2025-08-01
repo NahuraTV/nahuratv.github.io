@@ -5,10 +5,6 @@ html,body {
     --horizontal-margin: 15%;
 }
 
-.localized {
-    display: none;
-}
-
 .header {
     height: 150px;
     text-align: center;
@@ -16,37 +12,25 @@ html,body {
     align-items: center;
     justify-content: center;
 }
-.menu {
-    margin-top: 8px;
-    margin-left: 10px;
-    margin-right: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 .header_text {
+    margin-bottom: 12px;
     line-height: 200%;
     font-family: "Playfair Display", serif;
     font-size: 20px;
     font-weight: 700;
 }
-.selector {
+.navigation_menu a {
     color: black;
-    border-width: 0;
-    background-color: transparent;
+    text-decoration: none;
     font-family: "Fira sans", sans-serif;
     font-size: 16px;
-    text-align: center;
-}
-.selector:focus-visible {
-    outline: none !important;
-    box-shadow: none !important;
+    margin: 4px;
 }
 
 .banner {
     padding-top: var(--vertical-margin);
     padding-bottom: var(--vertical-margin);
-    background-image: url("images/polyphemus.png");
+    height: 350px;
     background-position: center center;
     display: flex;
     align-items: center;
@@ -96,7 +80,7 @@ html,body {
     font-weight: 700;
 }
 .projects_text {
-    font-family: "Fira Sans", serif;
+    font-family: "Fira Sans", sans-serif;
     font-size: 17px;
     font-weight: 300;
     line-height: 27px;
@@ -126,18 +110,206 @@ html,body {
     font-weight: 700;
 }
 .project_text {
-    font-family: "Fira Sans", serif;
+    font-family: "Fira Sans", sans-serif;
     font-size: 17px;
     font-weight: 300;
     line-height: 27px;
 }
 
-@media (max-width: 1000px) {
-    html,body {
-        --vertical-margin: 6%;
-        --horizontal-margin: 6%;
-    }
-    .banner_container {
-        width: 350px;
-    }
+/* EANA FTXÌ */
+
+.table_of_contents {
+    padding-left: var(--horizontal-margin);
+    padding-right: var(--horizontal-margin);
+    /* Only here to make sure you can comfortably see all of the table */
+    margin-bottom: 10%;
+}
+.table_of_contents h2 {
+    font-family: 'Playfair Display', serif;
+}
+.table_of_contents a {
+    color: black;
+    font-family: 'Fira Sans', sans-serif;
+    text-decoration: none;
+}
+
+.eana_ftxì_chapter .navi_text {
+    font-family: 'Comfortaa';
+    color: #1155cc;
+}
+.eana_ftxì_chapter .navi_text .stressed {
+    text-decoration: underline;
+}
+.eana_ftxì_chapter .english_text {
+    font-family: 'Comfortaa';
+    color: #1155cc;
+    font-style: italic;
+}
+.eana_ftxì_chapter .subject {
+    color: #351c75;
+}
+.eana_ftxì_chapter .verb {
+    color: #38761d;
+}
+.eana_ftxì_chapter .agent {
+    color: #1155cc;
+}
+.eana_ftxì_chapter .patient {
+    color: #bf9000;
+}
+
+.eana_ftxì_chapter .wiki_link a {
+    color: gray !important;
+}
+
+.eana_ftxì_chapter .sound_button {
+    width: 16px;
+    height: 16px;
+}
+
+.eana_ftxì_chapter {
+    font-family: serif;
+    margin: auto;
+    max-width: 200mm;
+    padding: 12px;
+}
+.eana_ftxì_chapter h1 {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: normal;
+    text-align: center;
+}
+.eana_ftxì_chapter h2 {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+.eana_ftxì_chapter h3 {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: normal;
+    font-size: larger;
+    color: gray;
+    margin-bottom: 8px;
+}
+.eana_ftxì_chapter h4 {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: normal;
+    color: gray;
+    margin-bottom: 8px;
+}
+.eana_ftxì_chapter .subtitle {
+    text-align: center;
+}
+.eana_ftxì_chapter p {
+    text-indent: 32px;
+    line-height: 150%;
+    margin-top: 0px;
+    margin-bottom: 8px;
+    font-family: 'Libre Calson Text', serif;
+}
+.eana_ftxì_chapter table {
+    font-family: 'Comfortaa', sans-serif;
+    table-layout: fixed;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+.eana_ftxì_chapter td {
+    padding-top: 4px;
+}
+
+.eana_ftxì_chapter .sound_table {
+    width: 90%;
+}
+.eana_ftxì_chapter .sound_table td:nth-child(1) {
+    width: 4%;
+}
+.eana_ftxì_chapter .sound_table td:nth-child(2) {
+    width: 4%;
+}
+.eana_ftxì_chapter .sound_table td:nth-child(3) {
+    width: 15%;
+}
+.eana_ftxì_chapter .sound_example_text {
+    font-family: 'Comfortaa', sans-serif;
+    color: #1155cc;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.eana_ftxì_chapter .exercise {
+    font-family: 'Comfortaa', sans-serif;
+    margin-bottom: 8px;
+}
+.eana_ftxì_chapter .exercise_table {
+    text-align: left;
+    width: 90%;
+}
+.eana_ftxì_chapter .exercise_answers {
+    background-color: #cfe2f3;
+    padding: 12px;
+    border-radius: 24px;
+}
+.eana_ftxì_chapter input[type="button"] {
+    border-style: none;
+    background-color: #006da5;
+    border-radius: 12px;
+    font-family: 'Comfortaa';
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding: 4px;
+    color: white;
+    cursor: pointer;
+}
+.eana_ftxì_chapter input[type="button"]:hover {
+    background-color: rgb(0, 124, 185);
+}
+.eana_ftxì_chapter input[type="button"]:active {
+    background-color: rgb(0, 134, 201);
+}
+
+.eana_ftxì_chapter .side_by_side {
+    table-layout: auto;
+    width: auto;
+    margin-bottom: 8px;
+}
+.eana_ftxì_chapter .side_by_side td {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.eana_ftxì_chapter .note {
+    width: 100%;
+    background-color: #cfe2f3;
+    border-radius: 24px;
+    text-align: center;
+    padding: 24px;
+}
+.eana_ftxì_chapter .note .note_title {
+    font-family: 'Comfortaa';
+    margin-bottom: 12px;
+}
+.eana_ftxì_chapter .note p {
+    font-family: 'Comfortaa';
+    text-indent: none;
+}
+
+.navigation_footer {
+    height: 64px;
+    margin-left: var(--horizontal-margin);
+    margin-right: var(--horizontal-margin);
+}
+.navigation a {
+    font-family: 'Playfair Display', serif;
+    color: black;
+    text-decoration: underline;
+}
+.navigation_back {
+    float: left;
+    align-content: center;
+    height: 100%;
+}
+.navigation_forward {
+    float: right;
+    align-content: center;
+    height: 100%;
 }
