@@ -246,6 +246,7 @@ html,body {
 }
 .eana_ftxì_chapter .exercise_table {
     text-align: left;
+    vertical-align: top;
 }
 .eana_ftxì_chapter .exercise_answers {
     background-color: #cfe2f3;
